@@ -95,7 +95,7 @@ function updateTDK($: cheerio.CheerioAPI, filePath: string): void {
       descriptionMeta.attr("content", pageDescription);
     } else {
       $("head").append(
-        `<meta name="description" content="${pageDescription}">`
+        `<meta name="description" content="${pageDescription}">`,
       );
     }
   }
@@ -103,7 +103,7 @@ function updateTDK($: cheerio.CheerioAPI, filePath: string): void {
   const keywordsMeta = $('meta[name="keywords"]');
   if (keywordsMeta.length === 0) {
     $("head").append(
-      '<meta name="keywords" content="Cloudflare, security, WAF, protection">'
+      '<meta name="keywords" content="Cloudflare, security, WAF, protection">',
     );
   }
 }
